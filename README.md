@@ -3,4 +3,7 @@ Output of Lab1
 
 
 Output of Lab2
+
+
+
 ![lab2 output](https://github.com/user-attachments/assets/ddebe2f5-9bbf-4c3b-b535-744068888ef7)
