@@ -1,0 +1,269 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: #222;
+  color: #fff;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header h1:hover,
+nav ul li a:hover {
+  color: #00b4d8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background: #00b4d8;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- HERO ---------- */
+#hero {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.hero .title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero .highlight {
+  animation: welcomeNameColor 3s infinite alternate;
+  font-weight: 900;
+}
+
+@keyframes welcomeNameColor {
+  0% {
+    color: #00b4d8;
+  }
+  50% {
+    color: #ff7b00;
+  }
+  100% {
+    color: #222;
+  }
+}
+
+.hero .sub {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- ABOUT ---------- */
+#about img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+  transition: 0.3s;
+}
+
+#about img:hover {
+  transform: scale(1.06);
+}
+
+#about p {
+  max-width: 650px;
+  margin: 15px auto;
+  font-size: 1.05rem;
+}
+
+/* ---------- PROJECTS ---------- */
+#project article {
+  background: #fff;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+h2{
+    text-align: center;
+}
+#project article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(2, 2, 2, 0.15);
+}
+
+/* ---------- SKILLS TABLE ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+}
+
+tr:hover {
+  background: #f1fcff;
+}
+
+/* ---------- CONTACT ---------- */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centers everything inside horizontally */
+  justify-content: center;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+#contact form {
+  width: 100%;
+  max-width: 600px;  /* keeps it clean on big screens */
+}
+
+#contact h2 {
+  width: 100%;
+  text-align: center;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+input,
+textarea,
+button {
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00b4d8;
+  transform: scale(1.02);
+}
+
+button {
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: #00b4d8;
+  transform: scale(1.05);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .title {
+    font-size: 2rem;
+  }
+  .hero .sub {
+    font-size: 1.1rem;
+  }
+}
